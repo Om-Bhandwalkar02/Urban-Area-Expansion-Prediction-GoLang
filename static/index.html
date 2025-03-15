@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Expansion Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- GitHub Icon from Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen flex flex-col items-center justify-center p-4">
+<!-- Main Container -->
+<div class="bg-gray-900/70 backdrop-blur-lg rounded-2xl shadow-2xl border border-gray-800 p-8 max-w-2xl w-full">
+    <!-- Header Section -->
+    <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-2">
+            Urban Expansion Prediction
+        </h1>
+        <p class="text-gray-400">Predict urban area expansion using AI and historical data.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <p class="text-gray-300 mb-6">
+            This tool uses <strong>linear regression</strong> to predict urban area expansion based on historical data. Enter a future year below to see the predicted results.
+        </p>
+
+        <!-- Input Section -->
+        <div class="mb-6">
+            <label for="year" class="block text-gray-300 font-medium mb-2">Enter Future Year:</label>
+            <input
+                    type="number"
+                    id="year"
+                    name="year"
+                    required
+                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-100 placeholder-gray-400"
+                    placeholder="e.g., 2030"
+            />
+        </div>
+
+        <!-- Predict Button -->
+        <button
+                onclick="predictArea()"
+                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+            Predict Expansion
+        </button>
+
+        <!-- Result Section -->
+        <div id="result" class="mt-6 p-4 bg-gray-800/50 rounded-lg text-lg font-semibold text-gray-100 text-center"></div>
+    </main>
+</div>
+
+<!-- Footer Section -->
+<footer class="mt-8 text-center text-gray-400">
+    <!-- GitHub Repository Link -->
+    <a
+            href="https://github.com/your-username/your-repo"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center space-x-2 hover:text-blue-400 transition-colors duration-300"
+    >
+        <i class="fab fa-github text-xl"></i>
+        <span>your-username/your-repo</span>
+    </a>
+    <p class="mt-2 text-sm">© 2023 Urban Expansion Prediction. All rights reserved.</p>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
